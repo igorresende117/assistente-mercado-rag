@@ -25,7 +25,7 @@ for arquivo in arquivos:
     loader = PyPDFLoader(arquivo)
     documentos.extend(loader.load())
 
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=200)
 chunks = text_splitter.split_documents(documentos)
 
 # 3. Cria o banco vetorial localmente
